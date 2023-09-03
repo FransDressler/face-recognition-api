@@ -14,7 +14,7 @@ const db = knex({
       ssl:true
     }
   });
-  
+
 const app = express();
 
 app.use(cors());
