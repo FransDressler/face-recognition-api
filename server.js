@@ -9,9 +9,13 @@ const profile = require('./controller/Profile');
 const image = require('./controller/Image');
 const db = knex({
   client: 'pg',
-  connection: process.env.PG_CONNECTION_STRING,
+  connection: {
+    connectionString: process.env.PG_CONNECTION_STRING,
+    ssl: { rejectUnauthorized: false }
+  },
   searchPath: ['knex', 'public'],
 });
+
 
   
 const app = express();
