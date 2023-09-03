@@ -27,7 +27,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.json("app running")
+    res.send("app running")
 });
 
 const port = process.env.PORT;
