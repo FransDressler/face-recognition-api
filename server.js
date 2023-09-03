@@ -8,12 +8,11 @@ const signin = require('./controller/SignIn');
 const profile = require('./controller/Profile');
 const image = require('./controller/Image');
 const db = knex({
-    client: 'pg',
-    connection: {
-      connectionString : "postgresql-perpendicular-58121",
-      ssl:true
-    }
-  });
+  client: 'pg',
+  connection: process.env.PG_CONNECTION_STRING,
+  searchPath: ['knex', 'public'],
+});
+
   
 const app = express();
 
