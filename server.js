@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
     res.json("app running")
 });
 
-const port = 3000;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log("app is running on ", port)
 })
