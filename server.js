@@ -17,8 +17,6 @@ const db = knex({
       database : 'face-recognition'
     }
   });
-
-db.select('*').from('users').then(data => {console.log(data)});
   
 const app = express();
 
